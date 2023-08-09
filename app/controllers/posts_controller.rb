@@ -26,7 +26,6 @@ class PostsController < ApplicationController
     end
   
     def update
-      @post = Post.find(params[:id])
       if @post.update(post_params)
         redirect_to posts_path, notice: 'Post updated!'
       else
@@ -36,7 +35,6 @@ class PostsController < ApplicationController
    
   
     def destroy
-      @post = Post.find(params[:id])
       @post.destroy
       redirect_to posts_path, notice: 'Post deleted!'
     end
@@ -57,8 +55,6 @@ class PostsController < ApplicationController
       params.require(:post).permit(:title, :content, :published)
     end
   
-    def find_post
-      @post = Post.friendly.find(params[:id])
-    end
+   
   end
   
