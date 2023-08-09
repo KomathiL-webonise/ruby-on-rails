@@ -1,6 +1,6 @@
 <%= form_with model: @post do |form| %>
-    <%= form.text_field :title, placeholder: "name" %>
-    <%= form.text_field :content, placeholder: "content" %>
-    <%= form.text_field :price, placeholder: "price" %>
+    <%= form.text_field :title %>
+    <%= form.text_field :content %>
+     <%= form.check_box :published %>
     <%= form.submit %>
-  <% end %>
+<% end %>

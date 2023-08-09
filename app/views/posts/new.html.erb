@@ -2,7 +2,7 @@
 
 <% if @post.errors.any? %>
     <%= @post.errors.full_messages %>
-    <% end %>
+<% end %>
 
 <%= form_for @post do |form| %>
     
@@ -12,7 +12,6 @@
     <%= form.label :content %>
     <%= form.text_field :content %>
 
-    <%= form.label :published %>
     <%= form.check_box :published %>
     <%= form.submit 'Create Post'%>
-    <% end %>
+ <% end %>
