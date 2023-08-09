@@ -1,0 +1,18 @@
+<h1>New</h1>
+
+<% if @post.errors.any? %>
+    <%= @post.errors.full_messages %>
+    <% end %>
+
+<%= form_for @post do |form| %>
+    
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+
+    <%= form.label :content %>
+    <%= form.text_field :content %>
+
+    <%= form.label :published %>
+    <%= form.check_box :published %>
+    <%= form.submit 'Create Post'%>
+    <% end %>
