@@ -1,0 +1,6 @@
+<%= form_with model: @post do |form| %>
+  <%= form.text_field :title %>
+  <%= form.text_field :content %>
+  <%= form.check_box :published %>
+  <%= form.submit %>
+<% end %>
