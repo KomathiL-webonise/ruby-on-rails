@@ -1,11 +1,6 @@
 class Post < ApplicationRecord
-  def publish
-    update(published: true)
-  rescue ActiveRecord::RecordInvalid => e
-  end
-
-  def unpublish
-    update(published: false)
+  def set_published_status(status)
+    update(published: status)
   rescue ActiveRecord::RecordInvalid => e
   end
 end
